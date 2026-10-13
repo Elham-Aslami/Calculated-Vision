@@ -1,0 +1,17 @@
+// Optional local presentation server. No npm installation is needed.
+import http from 'node:http';
+import {readFile,stat} from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.pdf':'application/pdf','.stl':'model/stl','.zip':'application/zip','.txt':'text/plain; charset=utf-8','.md':'text/plain; charset=utf-8'};
+const port=Number(process.env.PORT||8080);
+http.createServer(async(req,res)=>{
+  try{
+    const url=new URL(req.url,'http://localhost');let name=decodeURIComponent(url.pathname);if(name==='/')name='/index.html';
+    const file=path.resolve(root,'.'+name);if(!file.startsWith(root+path.sep)){res.writeHead(403);res.end('Forbidden');return;}
+    const info=await stat(file);if(!info.isFile())throw new Error('Not a file');
+    res.writeHead(200,{'Content-Type':types[path.extname(file)]||'application/octet-stream','Content-Length':info.size,'Cache-Control':'no-cache','X-Content-Type-Options':'nosniff'});
+    res.end(await readFile(file));
+  }catch{res.writeHead(404,{'Content-Type':'text/plain'});res.end('Not found');}
+}).listen(port,'127.0.0.1',()=>console.log(`Calculated Visions is ready: http://localhost:${port}\nKeep this terminal open during your presentation. Press Ctrl+C to stop.`));

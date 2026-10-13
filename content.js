@@ -1,0 +1,12 @@
+// Text used by interactive sections. Edit index.html for the main product copy.
+export const features = {
+  shell: { number: '01', label: 'Reflective shelter', icon: 'i-shelter', status: 'CURRENT DESIGN', title: 'A smaller space. A focused purpose.', description: 'A curved, reflective enclosure is intended to reduce heat gain around one worker taking a short rest. The final exterior and insulation materials remain under evaluation.', point: [8, -15.15, 36] },
+  entry: { number: '02', label: 'Side entrance', icon: 'i-shelter', status: 'FIT TESTING NEXT', title: 'A practical way in. A clear way out.', description: 'The arched side entrance is part of the current CAD. A full-size mockup will check the doorway, seated and reclined posture, and immediate unassisted exit before dimensions are finalized.', point: [5, -15.5, 14] },
+  cooling: { number: '03', label: 'Exterior AC module', icon: 'i-wind', status: 'COOLING CONCEPT', title: 'Active cooling. Outside the enclosure.', description: 'An exterior compressor AC module is planned to cool the shelter and reject heat outdoors. It requires compatible external power. The final unit, ventilation, and cooling performance still need validation.', point: [-43.5, -2, 10] }
+};
+export const audiences = {
+  forestry: { index:'01 / FORESTRY', title:'When the job takes you beyond the truck.', copy:'Forestry crews may work far from existing cooled spaces. We are exploring a compact rest shelter that can be placed closer, wherever compatible external power is practical.' },
+  construction: { index:'02 / CONSTRUCTION', title:'A break space closer to a changing worksite.', copy:'Remote construction can put crews at a distance from an air-conditioned vehicle or building. Our concept is intended to bring an enclosed cooling break location nearer to the work, with an appropriate external electrical supply.' },
+  conservation: { index:'03 / CONSERVATION', title:'Designed with work in the field in mind.', copy:'Conservation crews helped shape our thinking about remote access and practical assembly. Carryability, packed size, and external power access will be central questions in the full-size testing phase.' },
+  wildfire: { index:'04 / WILDFIRE SUPPORT', title:'Support for the people supporting the field.', copy:'Feedback from wildfire contractors informed the concept. We are considering rest locations for support crews with compatible power. The shelter is not a smoke refuge, fire shelter, or emergency treatment system.' }
+};

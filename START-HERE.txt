@@ -1,0 +1,19 @@
+CALCULATED VISIONS — PUBLISH ON GITHUB
+
+1. Extract the ZIP.
+2. Open the extracted calculated-visions folder.
+3. Create a public GitHub repository named calculated-visions.
+4. Use Add file > Upload files.
+5. Upload EVERYTHING INSIDE this folder, including assets, vendor, and scripts.
+   Upload extracted files, not the ZIP or the enclosing folder.
+   index.html must appear at the top level of your GitHub repository.
+6. Commit the files to main.
+7. Go to Settings > Pages.
+8. Select Deploy from a branch > main > / (root) > Save.
+9. Open the website link GitHub provides after deployment finishes.
+
+README.md contains full publishing and editing instructions.
+presenting.html contains the presentation walkthrough.
+
+The inquiry form is a clearly labeled demonstration and does not send messages.
+The original STL and all 3D libraries are included.
